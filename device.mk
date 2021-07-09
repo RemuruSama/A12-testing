@@ -33,6 +33,10 @@ PRODUCT_PACKAGES += \
 # Dirac
 $(call inherit-product-if-exists, packages/apps/RealmeDirac/dirac.mk)
 
+# Google Photos
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/pixel/pixel_2016_exclusive.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/pixel_2016_exclusive.xml
+
 # Display
 PRODUCT_PACKAGES += \
     libdisplayconfig \
